@@ -1,0 +1,31 @@
+<app-navbar></app-navbar>
+
+<!-- This is a card for the question and answers to be on for taking quiz -->
+<div class="card border-secondary mb-3">
+    <div class="card-header">
+        <div class="card-body text-secondary">
+            <h4 class="card-title">Java & Angular Quiz</h4>
+            <div *ngIf="currentQuiz < quizzes.length +1">
+                <h5 class="card-text">{{currentQuiz +1}} of {{quizzes.length}} {{quizzes[currentQuiz].question}}</h5>
+                <ul class="list-group" *ngFor="let quiz of quizzes[currentQuiz].answer">
+                    <label>
+                        <!--appBackground [correctAnswer]="quiz.correct"-->
+                        <li class="list-group-item" >
+                            <input type="radio" name="options" (change)="onAnswer(quiz.correct)"
+                                >
+                        <li class="list-group-item">{{quiz.option}}</li>
+                    </label>
+                </ul>
+            </div>
+            <div *ngIf="currentQuiz > quizzes.length">
+                <button class="btn btn-warning" (click)="showResult()">Submit Quiz</button>
+                <!--after submitting we will show amount of correct/incorrect answers-->
+                <div>
+                    Correct Answers: {{correctAnswers}} | Incorrect Ansewers: {{incorrectAnswers}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+       <!--[disabled]="answerSelected"-->

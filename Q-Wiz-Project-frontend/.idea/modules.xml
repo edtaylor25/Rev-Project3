@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/Q-Wiz-Project.iml" filepath="$PROJECT_DIR$/.idea/Q-Wiz-Project.iml" />
+      <module fileurl="file://$PROJECT_DIR$/NEW_Q-Wiz_Backened-PROJECT/Q-Wiz_Backened.iml" filepath="$PROJECT_DIR$/NEW_Q-Wiz_Backened-PROJECT/Q-Wiz_Backened.iml" />
+    </modules>
+  </component>
+</project>

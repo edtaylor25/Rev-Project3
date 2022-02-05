@@ -1,0 +1,74 @@
+<app-navbar></app-navbar>
+
+<!-- This is a login form -->
+<div class="row" id="loginAccount" *ngIf="toggleOn">
+  <div class="col s6 offset-s3">
+    <div class="card">
+      <div class="card-content">
+        <form #loginForm="ngForm">
+          <div class="row">
+            <div class="input-field col s12">
+              <input type="email" placeholder="Email" name="email" #Email ngModel required [pattern]="emailPattern">
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <input type="password" placeholder="Password" name="password" #Password ngModel required>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <button type="submit" [disabled]="!loginForm.valid" class="btn btn-warning">Log in</button>
+              <p id="p-index">To create an account, <button (click)="toggleOn =!toggleOn" class="btn btn-secondary"
+                  id="create-link">click here.</button></p>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- This is a register form -->
+  <div class="row" id="createAccount" *ngIf="!toggleOn">
+    <div class="col s6 offset-s3">
+      <div class="card">
+        <div class="card-content">
+          <form #registerForm="ngForm">
+            <div class="row">
+              <div class="input-field col s12">
+                <input type="text" placeholder="First Name" name="first_name" #Name ngModel required>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <input type="text" placeholder="Last Name" name="last_name" #Name ngModel required>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <input type="email" placeholder="Email" name="email" #Email ngModel required [pattern]="emailPattern">
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <input type="text" placeholder="Username" name="user_name" #Username ngModel required>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <input type="password" placeholder="Password" name="password" #Password ngModel required>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <button type="submit" [disabled]="!registerForm.valid" class="btn btn-warning">Register</button>
+                <p id="p-index">If you already have an account, <button (click)="toggleOn =!toggleOn" class="btn btn-secondary"
+                    id="create-link">click here.</button></p>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>

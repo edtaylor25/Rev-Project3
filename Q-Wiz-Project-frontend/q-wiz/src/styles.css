@@ -1,0 +1,64 @@
+/* You can add global styles to this file, and also import other style files */
+@font-face{
+    font-family: Futura-Std-Medium;
+    src: url ('assets/Futura-Std-Medium.otf')
+    format('opentype');
+    }
+
+
+/* This is adding a linear gradient color (Left to Right) for the background - every page */
+body {
+   
+    align-content: center;
+    background: linear-gradient(0.25turn, rgb(115,165,194), rgb(185,185,186), rgb(253,181,21))fixed;
+    height: stretch;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: auto;
+
+}
+/* this is for if an input is invalid*/
+input.ng-invalid.ng-dirty{
+    border-bottom-color: red !important;
+    box-shadow: 0 1px 0 0 red !important;
+}
+
+
+h1 {
+    font-size: 5.2rem;
+    font-weight: 600;
+    color: #56A5EB;
+    margin-bottom: 5rem;
+  }
+  .container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  .container > * {
+    width: 100%;
+  }
+  .flex-center {
+    justify-content: center;
+    align-items: center;
+  }
+  .flex-column {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .btn {
+    min-width: 200px;
+    min-height: 50px;
+    margin-bottom: 1rem;
+    font-size: 18px;
+  }
+  .btn:hover {
+    box-shadow: 0 0.4rem 1.4rem 0 rgba(23, 26, 27, 0.562);
+    transform: translateY(-0.2rem);
+    transition: transform (100ms);
+  }

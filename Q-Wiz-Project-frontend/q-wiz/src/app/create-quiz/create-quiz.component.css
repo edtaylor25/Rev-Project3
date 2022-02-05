@@ -1,0 +1,24 @@
+p {
+    color: whitesmoke;
+    text-shadow: 3em;
+    font-weight: bolder;
+    font-size: 1em;
+    margin-top: 1.5em;
+    margin-left: 1.5em;
+}
+
+div.card {
+    margin-left: 1em;
+    margin-top: 1em;
+    padding: 2em;
+    width: 30em;
+    border-radius: 20%;
+}
+
+input.form-control {
+    width: 20em;
+}
+
+button {
+    margin: .5em;
+}
